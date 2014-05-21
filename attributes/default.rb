@@ -18,4 +18,4 @@
 # limitations under the License.
 #
 
-# Set meaningful node attributes here
+default['php5']['modules'] = %w( php5 php5-apcu php5-cli php5-curl php5-dev php5-gd php5-json php5-mysql php5-pgsql php5-readline php5-redis php5-sqlite php5-tidy php5-xsl )

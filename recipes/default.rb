@@ -19,3 +19,11 @@
 #
 
 include_recipe 'chef-sugar::default'
+
+include_recipe 'apache2::default'
+
+node['php5']['modules'].each do |mod|
+  package mod do
+    notifies :restart, 'service[apache2]'
+  end
+end

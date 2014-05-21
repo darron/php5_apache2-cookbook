@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'php5_apache2::default' do
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
-  it 'does something' do
-    pending 'Replace this with meaningful tests'
+  it 'includes the apache2 recipes' do
+    expect(chef_run).to include_recipe('apache2::default')
   end
 end
